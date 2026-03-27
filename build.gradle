@@ -1,0 +1,36 @@
+buildscript {
+    ext {
+        androidxCoreKtxVersion = '1.9.0'
+        androidxAppcompatVersion = '1.6.1'
+        googleMaterialVersion = '1.9.0'
+        constraintlayoutVersion = '2.1.4'
+        fragmentVersion = '1.6.1'
+        recyclerviewVersion = '1.3.1'
+    }
+    repositories {
+        mavenCentral()
+        google()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url "https://maven.rongcloud.cn/repository/maven-releases/" }
+        maven { url "https://maven.rongcloud.cn/repository/maven-test/" }
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.8.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:1.9.10"
+        classpath 'com.google.gms:google-services:4.3.13'
+        classpath 'com.huawei.agconnect:agcp:1.9.1.301'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url "https://maven.rongcloud.cn/repository/maven-releases/" }
+        maven { url "https://maven.rongcloud.cn/repository/maven-test/" }
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}

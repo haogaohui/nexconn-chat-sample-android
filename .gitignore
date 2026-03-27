@@ -1,0 +1,9 @@
+/build
+/channel-dnd/build
+/channel-list/build
+/commonmodule/build
+/directchannel-send-media/build
+/directchannel-send-text/build
+/groupchannel-create-send/build
+/groupchannel-members/build
+/.gradle

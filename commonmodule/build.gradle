@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'ai.nexconn.chat.sample.module'
+    compileSdk NEXCONN_COMPILE_SDK.toInteger()
+
+    defaultConfig {
+        minSdk NEXCONN_MIN_SDK.toInteger()
+        targetSdk NEXCONN_TARGET_SDK.toInteger()
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    api "androidx.core:core-ktx:$androidxCoreKtxVersion"
+    api "androidx.appcompat:appcompat:$androidxAppcompatVersion"
+    api "com.google.android.material:material:$googleMaterialVersion"
+
+    api 'ai.nexconn.chat:nexconn-chat:26.1.0'
+}

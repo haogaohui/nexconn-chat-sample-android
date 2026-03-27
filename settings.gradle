@@ -1,0 +1,10 @@
+rootProject.name = 'NexconnChatSamples'
+
+include ':commonmodule'
+
+include ':directchannel-send-text'
+include ':directchannel-send-media'
+include ':groupchannel-create-send'
+include ':channel-list'
+include ':channel-dnd'
+include ':groupchannel-members'
